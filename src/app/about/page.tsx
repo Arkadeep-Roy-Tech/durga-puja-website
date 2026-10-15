@@ -45,7 +45,7 @@ export default function AboutPage() {
       {/* =========================================================================
           PAGE HEADER (Editorial Banner with 43-Year Milestone)
           ========================================================================= */}
-      <section className="relative py-20 sm:py-28 bg-charcoal text-ivory overflow-hidden border-b border-gold/30">
+      <section className="relative py-12 sm:py-16 md:py-20 bg-charcoal text-ivory overflow-hidden border-b border-gold/30">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/mandap-panorama.jpg"
@@ -57,7 +57,7 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-charcoal/80 via-charcoal/90 to-charcoal" />
         </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3 sm:space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold/40 text-gold text-xs uppercase tracking-[0.22em] font-sans bg-charcoal/60 backdrop-blur-md">
             <div className="relative w-4 h-4 rounded-full overflow-hidden shrink-0">
               <Image
@@ -85,10 +85,10 @@ export default function AboutPage() {
       {/* =========================================================================
           SECTION 1: OUR 43-YEAR JOURNEY (OFFICIAL COMMITTEE CONTENT)
           ========================================================================= */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <FadeIn>
           {/* Section Header */}
-          <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14 space-y-3">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-gold/40 bg-gold/10 text-sindoor text-xs uppercase tracking-[0.22em] font-sans font-bold">
               <Clock className="w-3.5 h-3.5 text-gold-dark" />
               <span>Official Committee History</span>

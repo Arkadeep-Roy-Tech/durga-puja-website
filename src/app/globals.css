@@ -76,3 +76,13 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+/* Cross-browser scrollbar hiding for horizontal category & tab strips */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+

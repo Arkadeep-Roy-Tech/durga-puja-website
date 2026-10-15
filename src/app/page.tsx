@@ -22,7 +22,6 @@ import {
 } from "@/components/MotionWrapper";
 import {
   EditorialDivider,
-  AlpanaLotus,
   CornerBrackets,
   TrishulEmblem,
 } from "@/components/AlpanaOrnament";
@@ -43,74 +42,82 @@ export default function HomePage() {
       {/* =========================================================================
           HERO SECTION (Cinematic Editorial Durga Puja Hero with Verified Maa Durga)
           ========================================================================= */}
-      <section className="relative min-h-[92vh] flex items-center justify-center text-ivory px-4 sm:px-6 lg:px-8 py-20 bg-charcoal overflow-hidden">
-        {/* Cinematic Background Image using Actual Maa Durga Pratima */}
+      <section className="relative min-h-[640px] md:min-h-[680px] lg:min-h-[720px] xl:min-h-[760px] flex flex-col justify-between text-ivory px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 pb-6 sm:pb-8 bg-charcoal overflow-hidden">
+        {/* Cinematic Background Image using Actual Maa Durga Pratima and Deities */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/maa-durga-portrait.jpg"
-            alt="Actual Sri Sri Durga Pratima of Sri Durga Pooja Committee Mangaluru"
+            src="/images/homepage-hero.jpg"
+            alt="Sri Sri Durga Pratima, Deities, and Golden Mandap of Sri Durga Pooja Committee Mangaluru"
             fill
             priority
             sizes="100vw"
-            className="object-cover object-top opacity-30 scale-105 transform motion-safe:transition-transform motion-safe:duration-1000"
+            quality={92}
+            className="object-cover object-[center_35%] lg:object-center select-none"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/80 to-charcoal/50" />
-          <div className="absolute inset-0 bg-radial from-transparent via-charcoal/40 to-charcoal/90" />
+          {/* Subtle top vignette for navbar & top typography legibility */}
+          <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-charcoal/90 via-charcoal/50 to-transparent pointer-events-none" />
+          {/* Subtle bottom gradient over carpet stage to anchor buttons and details */}
+          <div className="absolute bottom-0 inset-x-0 h-64 bg-gradient-to-t from-charcoal via-charcoal/70 to-transparent pointer-events-none" />
         </div>
 
-        {/* Subtle Background Alpana Watermark */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-10 text-gold">
-          <AlpanaLotus size={640} />
-        </div>
-
-        {/* Hero Content Container */}
-        <div className="relative z-10 max-w-5xl mx-auto text-center space-y-8">
+        {/* TOP HERO HEADER: Milestone Badge & Sacred Bengali Greeting (Over Golden Arch) */}
+        <div className="relative z-10 max-w-4xl mx-auto text-center w-full pt-1 sm:pt-2">
           <HeroScaleEntrance>
-            {/* Top Ornamental Milestone Badge */}
-            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-gold/40 bg-charcoal/70 backdrop-blur-md text-gold text-xs uppercase tracking-[0.25em] font-sans">
-              <div className="relative w-5 h-5 rounded-full overflow-hidden shrink-0">
-                <Image
-                  src="/images/emblem-43-years.png"
-                  alt="43 Years"
-                  width={20}
-                  height={20}
-                  className="object-contain"
-                />
+            <div className="space-y-2.5 sm:space-y-3">
+              {/* Top Ornamental Milestone Badge */}
+              <div className="inline-flex items-center justify-center gap-2 sm:gap-3 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full border border-gold/50 bg-charcoal/85 text-gold text-[10px] sm:text-xs uppercase tracking-[0.14em] sm:tracking-[0.24em] font-sans shadow-lg max-w-full">
+                <div className="relative w-4 h-4 sm:w-5 sm:h-5 rounded-full overflow-hidden shrink-0">
+                  <Image
+                    src="/images/emblem-43-years.png"
+                    alt="43 Years"
+                    width={20}
+                    height={20}
+                    className="object-contain"
+                  />
+                </div>
+                <span className="font-semibold text-gold-light">
+                  {FESTIVAL_EDITION} of Durga Pooja in Mangaluru (1984 – {FESTIVAL_YEAR})
+                </span>
+                <span className="w-1.5 h-1.5 rounded-full bg-sindoor-light shrink-0" />
               </div>
-              <span className="font-semibold text-gold-light">
-                {FESTIVAL_EDITION} of Durga Pooja in Mangaluru (1984 – {FESTIVAL_YEAR})
-              </span>
-              <span className="w-1.5 h-1.5 rounded-full bg-sindoor-light" />
-            </div>
 
-            {/* Sacred Bengali Heading */}
-            <h1 className="mt-6 font-bengali text-4xl sm:text-6xl md:text-7xl font-bold tracking-wide text-gold-light drop-shadow-md">
-              শুভ দুর্গাপূজা
-            </h1>
+              {/* Sacred Bengali Heading */}
+              <h1 className="font-bengali text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-wide text-gold-light drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
+                শুভ দুর্গাপূজা
+              </h1>
 
-            {/* Refined English Headline */}
-            <div className="mt-4 space-y-2">
-              <p className="text-xs sm:text-sm md:text-base font-sans tracking-[0.28em] uppercase text-ivory/85 font-semibold">
+              {/* Committee Title */}
+              <p className="text-xs sm:text-sm md:text-base font-sans tracking-[0.22em] sm:tracking-[0.28em] uppercase text-ivory/95 font-semibold drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
                 Sri Durga Pooja Committee (R), Mangaluru
               </p>
-              <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-ivory max-w-4xl mx-auto leading-tight">
-                A 43-Year Legacy of <span className="italic font-normal text-gold">Devotion</span>,
-                Culture & Divine Grace
-              </h2>
             </div>
+          </HeroScaleEntrance>
+        </div>
+
+        {/* MIDDLE OPEN ZONE: Leaves Maa Durga and the 5 deities 100% visible and unblocked */}
+        <div className="relative z-10 flex-1 min-h-[120px] sm:min-h-[160px] md:min-h-[180px] pointer-events-none" aria-hidden="true" />
+
+        {/* BOTTOM HERO CARD: Headline, Invitation, Buttons & Ribbon (Anchored over Stage Carpet) */}
+        <div className="relative z-10 max-w-4xl mx-auto text-center w-full">
+          <div className="relative rounded-2xl bg-charcoal/80 sm:bg-charcoal/75 backdrop-blur-xs border border-gold/35 shadow-[0_16px_50px_rgba(0,0,0,0.7)] px-4 py-4 sm:px-8 sm:py-5 md:px-10 md:py-6 space-y-3 sm:space-y-4">
+            {/* English Headline */}
+            <h2 className="font-serif text-lg sm:text-2xl md:text-3xl lg:text-4xl font-light text-ivory max-w-3xl mx-auto leading-tight drop-shadow-md">
+              A 43-Year Legacy of <span className="italic font-normal text-gold">Devotion</span>,
+              Culture & Divine Grace
+            </h2>
 
             {/* Welcoming Subtitle with Verified Venue and Dates */}
-            <p className="mt-6 max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-ivory/85 font-sans font-light leading-relaxed">
+            <p className="max-w-2xl mx-auto text-xs sm:text-sm md:text-base text-ivory/90 font-sans font-light leading-relaxed drop-shadow-sm">
               We cordially invite you, your family and friends to celebrate Sri Sri Durga
               Pooja from <strong className="text-gold font-normal">{FESTIVAL_DATES}</strong> at{" "}
               <strong className="text-gold font-normal">“{VENUE_NAME}”</strong>, Lalbagh, Mangaluru.
             </p>
 
             {/* Working Action Buttons */}
-            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 pt-2">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-4 pt-0.5 sm:pt-1">
               <Link
                 href="/events"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 bg-sindoor text-ivory font-sans text-xs uppercase tracking-[0.18em] font-semibold rounded hover:bg-sindoor-light transition-all duration-300 shadow-lg hover:shadow-sindoor/30 focus:outline-none focus:ring-2 focus:ring-gold"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-2.5 sm:py-3 bg-sindoor text-ivory font-sans text-xs uppercase tracking-[0.18em] font-semibold rounded hover:bg-sindoor-light transition-all duration-300 shadow-lg hover:shadow-sindoor/30 focus:outline-none focus:ring-2 focus:ring-gold"
               >
                 <Calendar className="w-4 h-4 text-gold-light" />
                 <span>2026 Festival Schedule</span>
@@ -118,7 +125,7 @@ export default function HomePage() {
 
               <Link
                 href="/about"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 bg-transparent text-ivory font-sans text-xs uppercase tracking-[0.18em] font-medium rounded border border-gold/50 hover:bg-gold/15 hover:border-gold transition-all duration-300 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-gold"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-2.5 sm:py-3 bg-charcoal/70 text-ivory font-sans text-xs uppercase tracking-[0.18em] font-medium rounded border border-gold/50 hover:bg-gold/15 hover:border-gold transition-all duration-300 backdrop-blur-xs focus:outline-none focus:ring-2 focus:ring-gold"
               >
                 <span>43 Years of Heritage</span>
                 <ArrowRight className="w-4 h-4 text-gold-light" />
@@ -126,21 +133,21 @@ export default function HomePage() {
             </div>
 
             {/* Verified Information Ribbon */}
-            <div className="mt-14 pt-8 border-t border-gold/20 max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-sans text-ivory/80">
+            <div className="pt-3 sm:pt-4 border-t border-gold/25 grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3 text-[11px] sm:text-xs font-sans text-ivory/85">
               <div className="flex items-center justify-center gap-2">
-                <Calendar className="w-4 h-4 text-gold shrink-0" />
-                <span>15th – 21st October 2026</span>
+                <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gold shrink-0" />
+                <span className="font-medium drop-shadow-sm">15th – 21st October 2026</span>
               </div>
               <div className="flex items-center justify-center gap-2">
-                <MapPin className="w-4 h-4 text-gold shrink-0" />
-                <span>Hindi Prachar Bhavan, Lalbagh</span>
+                <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gold shrink-0" />
+                <span className="font-medium drop-shadow-sm">Hindi Prachar Bhavan, Lalbagh</span>
               </div>
               <div className="flex items-center justify-center gap-2">
-                <Award className="w-4 h-4 text-gold shrink-0" />
-                <span>Inauguration: 16th Oct at 7:30 PM</span>
+                <Award className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gold shrink-0" />
+                <span className="font-medium drop-shadow-sm">Inauguration: 16th Oct at 7:30 PM</span>
               </div>
             </div>
-          </HeroScaleEntrance>
+          </div>
         </div>
       </section>
 

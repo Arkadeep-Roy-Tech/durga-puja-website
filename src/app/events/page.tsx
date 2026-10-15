@@ -49,8 +49,8 @@ export default function EventsPage() {
       {/* =========================================================================
           PAGE HERO (Verified Schedule Banner)
           ========================================================================= */}
-      <section className="relative py-20 bg-charcoal text-ivory border-b border-gold/30">
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <section className="relative py-10 sm:py-14 md:py-16 bg-charcoal text-ivory border-b border-gold/30">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3 sm:space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-gold/40 text-gold text-xs uppercase tracking-[0.22em] font-sans">
             <Calendar className="w-3.5 h-3.5" />
             <span>Official Festival Calendar & Cultural Roster</span>
@@ -65,7 +65,7 @@ export default function EventsPage() {
             <strong>“{VENUE_NAME}”</strong>, Lalbagh, Mangaluru.
           </p>
 
-          <div className="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded bg-ivory/10 border border-gold/30 text-xs text-gold-light max-w-md mx-auto">
+          <div className="mt-2 sm:mt-4 inline-flex items-center gap-2 px-4 py-2 rounded bg-ivory/10 border border-gold/30 text-xs text-gold-light max-w-md mx-auto">
             <CheckCircle2 className="w-4 h-4 text-gold shrink-0" />
             <span>Verified from Official Sri Durga Pooja Committee Announcement</span>
           </div>

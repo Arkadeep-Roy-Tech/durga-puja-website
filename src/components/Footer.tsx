@@ -109,7 +109,15 @@ export default function Footer() {
                   href="/gallery"
                   className="text-ivory/75 hover:text-gold transition-colors inline-block"
                 >
-                  Photographs & Visitor Guide
+                  Festival Photographs & Archive
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="text-ivory/75 hover:text-gold transition-colors inline-block"
+                >
+                  Visitor Information Desk & Contact
                 </Link>
               </li>
             </ul>
@@ -180,6 +188,16 @@ export default function Footer() {
                     https://www.sridurgapoojacommitteemangaluru.org/
                   </a>
                 </div>
+              </div>
+
+              <div className="pt-2 border-t border-gold/15">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-1.5 text-xs text-gold hover:text-gold-light font-semibold hover:underline"
+                >
+                  <span>Visitor Desk & Venue Directions</span>
+                  <span>→</span>
+                </Link>
               </div>
             </div>
           </div>

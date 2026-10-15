@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Festival Gallery & Visitor Guide",
+  title: "Festival Photography & Visual Archive",
   description:
-    "Curated photographs and comprehensive visitor travel guide for Sri Durga Pooja Committee (R), Mangaluru at Hindi Prachar Bhavan, Lalbagh. Rituals, dhunuchi naach, mandap artistry, and travel directions.",
+    "Curated collection of 40 verified original photographs capturing the sacred rituals, classical cultural evenings, and vibrant community spirit of Sri Durga Pooja Committee (R), Mangaluru.",
 };
 
 export default function GalleryLayout({

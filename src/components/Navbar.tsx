@@ -13,6 +13,7 @@ const NAV_LINKS = [
   { name: "Souvenir", href: "/souvenir" },
   { name: "Events", href: "/events" },
   { name: "Gallery", href: "/gallery" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -21,10 +22,17 @@ export default function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 20);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -95,7 +103,7 @@ export default function Navbar() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`relative px-4 py-2 text-sm font-medium tracking-wide transition-colors duration-200 rounded-sm ${
+                    className={`relative px-3 lg:px-4 py-2 text-sm font-medium tracking-wide transition-colors duration-200 rounded-sm ${
                       isActive
                         ? "text-sindoor font-bold"
                         : "text-charcoal hover:text-sindoor font-medium"
@@ -231,12 +239,12 @@ export default function Navbar() {
                   <span>View 2026 Festival Schedule</span>
                 </Link>
                 <Link
-                  href="/gallery#visit"
+                  href="/contact"
                   onClick={() => setIsOpen(false)}
                   className="w-full py-2.5 px-4 bg-transparent border border-gold/40 text-charcoal text-center font-sans text-xs uppercase tracking-widest font-medium rounded flex items-center justify-center gap-2 hover:bg-gold/10"
                 >
                   <MapPin className="w-3.5 h-3.5 text-sindoor" />
-                  <span>Hindi Prachar Bhavan, Lalbagh</span>
+                  <span>Visitor Desk & Venue Location</span>
                 </Link>
               </div>
             </motion.div>

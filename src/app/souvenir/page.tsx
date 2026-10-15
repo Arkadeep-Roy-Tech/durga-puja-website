@@ -33,11 +33,11 @@ export default function SouvenirPage() {
       {/* =========================================================================
           PAGE HERO HEADER
           ========================================================================= */}
-      <section className="relative py-20 sm:py-24 bg-charcoal text-ivory border-b border-gold/30 overflow-hidden">
+      <section className="relative py-10 sm:py-14 md:py-16 bg-charcoal text-ivory border-b border-gold/30 overflow-hidden">
         {/* Subtle decorative background glow */}
         <div className="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(ellipse_at_center,_var(--color-sindoor)_0%,_transparent_75%)]" />
 
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3 sm:space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold/40 bg-gold/10 text-gold text-xs uppercase tracking-[0.24em] font-sans">
             <BookOpen className="w-3.5 h-3.5" />
             <span>43rd Annual Sharadotsav Commemorative Publication</span>
@@ -60,7 +60,7 @@ export default function SouvenirPage() {
             Sri Durga Pooja Committee, Mangaluru.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 pt-3 text-xs font-mono text-gold-light uppercase tracking-wider">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 pt-2 sm:pt-3 text-xs font-mono text-gold-light uppercase tracking-wider">
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-3.5 h-3.5 text-gold" />
               <span>Complete 66 Pages</span>
@@ -86,7 +86,7 @@ export default function SouvenirPage() {
       {/* =========================================================================
           MAIN DIGITAL BOOK READING SECTION
           ========================================================================= */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <FadeIn>
           {/* Section Introduction */}
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
