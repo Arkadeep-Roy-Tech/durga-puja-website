@@ -39,3 +39,18 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# private reference materials, original unselected photos & source documents
+reference-materials/
+scratch/
+
+# secrets and credentials
+*.key
+*.cert
+*.crt
+*.secret
+.env*.local
+
+# system files
+Thumbs.db
+

@@ -1,26 +1,78 @@
 @import "tailwindcss";
 
+@theme {
+  --color-ivory: #F8F3E9;
+  --color-ivory-light: #FDFBF7;
+  --color-ivory-dark: #ECE3D2;
+  --color-sindoor: #921F2F;
+  --color-sindoor-dark: #6F1522;
+  --color-sindoor-light: #AC273A;
+  --color-gold: #D4A65C;
+  --color-gold-light: #E8C587;
+  --color-gold-dark: #A47B36;
+  --color-charcoal: #26201E;
+  --color-charcoal-light: #3F3633;
+  --color-charcoal-muted: #786C67;
+
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-bengali: var(--font-hind-siliguri), sans-serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F8F3E9;
+  --foreground: #26201E;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  background-color: #F8F3E9;
+  color: #26201E;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F8F3E9;
+  color: #26201E;
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Custom Text Selection */
+::selection {
+  background-color: #921F2F;
+  color: #F8F3E9;
+}
+
+/* Hairline border accents */
+.border-hairline-gold {
+  border-color: rgba(212, 166, 92, 0.28);
+}
+
+.border-hairline-sindoor {
+  border-color: rgba(146, 31, 47, 0.25);
+}
+
+/* Subtle Alpana Motif SVG Background Pattern */
+.bg-alpana-subtle {
+  background-image: radial-gradient(circle at 50% 50%, rgba(212, 166, 92, 0.08) 1px, transparent 1px),
+    radial-gradient(circle at 0% 0%, rgba(146, 31, 47, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.bg-alpana-mandala {
+  background-image: radial-gradient(rgba(212, 166, 92, 0.12) 1.5px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
